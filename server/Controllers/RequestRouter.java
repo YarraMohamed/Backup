@@ -7,6 +7,7 @@ public class RequestRouter {
    
     public static String routeRequest(String request, GameClientHandler gameClient) {
         
+        System.out.println("request in serverHandler "+request);
         JSONObject jsonReceived = new JSONObject(request);
         String requestType = jsonReceived.getString("requestType");
 
@@ -34,6 +35,7 @@ public class RequestRouter {
             case "USER_NAME":
                 return requestHandler.userNameHandle(playerID);
             case "GAME_REQUEST":
+                System.out.println("gone here");
                 return requestHandler.handleGameRequest(jsonReceived);
             default:
                 return "Error: Invalid request type.";

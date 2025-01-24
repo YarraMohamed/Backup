@@ -9,6 +9,7 @@ public class ServerMessagesRouter {
     public static void routeServerMessage(String message) {
         
         try {
+            System.out.println("message in routeServer "+message);
             JSONObject serverMessageJson = new JSONObject(message);
             ServerMessagesHandler serverMessagesHandler = new ServerMessagesHandler();
             

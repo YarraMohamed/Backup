@@ -41,7 +41,7 @@ public class GameClientHandler extends Thread {
             bufferedReader = new BufferedReader(new InputStreamReader(gameClientSocket.getInputStream()));
             printStream = new PrintStream(gameClientSocket.getOutputStream());
             GameClientHandler.gameClientsVector.add(this); 
-            System.out.println("Added to gameClientsVector: " + this); // log message
+            //System.out.println("Added to gameClientsVector: " + this); // log message
             start(); 
         } catch (IOException e) {
           e.printStackTrace();
@@ -65,6 +65,7 @@ public class GameClientHandler extends Thread {
                         continue;
                     }
                     String response = RequestRouter.routeRequest(message, this);
+                    System.out.println("Response in handle clinet "+response);
                     printStream.println(response);
                     printStream.flush();
                     JSONObject request = new JSONObject(message);
@@ -99,6 +100,7 @@ public class GameClientHandler extends Thread {
     public static GameClientHandler getGameClient(int playerId) {
         for (GameClientHandler client: gameClientsVector) {
             if (client.playerId == playerId) {
+                System.out.println("found client "+client.playerId);
                 return client;
             }
         }
@@ -106,7 +108,7 @@ public class GameClientHandler extends Thread {
     }
             
 
-    public void sendGameRequest(int requestingPlayerId, String requestingPlayerUsername) {
+    public String sendGameRequest(int requestingPlayerId, String requestingPlayerUsername) {
         
         JSONObject json = new JSONObject();
         json.put("requestType", "GAME_REQUEST");
@@ -115,8 +117,10 @@ public class GameClientHandler extends Thread {
         
         System.out.println("Sending game request JSON: " + json.toString()); 
         
-        printStream.println(json.toString());
-        printStream.flush();
+        return json.toString();
+        
+        /*printStream.println(json.toString());
+        printStream.flush();*/
     }
     
 

@@ -21,9 +21,10 @@ public class RequestHandler {
             JSONObject signInJsonResponse = new JSONObject(result);
             String signInResponse = signInJsonResponse.optString("response"); // opt or get?
             
-            if (signInResponse.equals("Success")) {
+            if (signInResponse.equals("LOGGED_IN")) {
                 int playerId = signInJsonResponse.optInt("Player_ID");
                 gameClientHandler.mapPlayerIdToClient(playerId);
+                //System.out.println(GameClientHandler.clientMap);
             }
             
             return result ;
@@ -43,7 +44,7 @@ public class RequestHandler {
             JSONObject signInJsonResponse = new JSONObject(result);
             String signInResponse = signInJsonResponse.optString("response"); // opt or get?
             
-            if (signInResponse.equals("Success")) {
+            if (signInResponse.equals("LOGGED_IN")) {
                 int playerId = signInJsonResponse.optInt("Player_ID");
                 gameClientHandler.mapPlayerIdToClient(playerId);
             }
@@ -108,7 +109,7 @@ public class RequestHandler {
     public String handleGameRequest(JSONObject jsonReceived) {
         
         //GameClientHandler.printVector();
-        
+        System.out.println("handle request game " );
         JSONObject handlingGameRequestResponse = new JSONObject();
         handlingGameRequestResponse.put("response", "GAME_REQUEST_SUCCESS");
 
@@ -127,8 +128,7 @@ public class RequestHandler {
 
         if (requestedPlayer != null) {
             /* Should I check if the player's socket is connected? Or will all players be already online and connected to a socket? */
-           requestedPlayer.sendGameRequest(requestingPlayerId, requestingPlayerUsername);
-           return handlingGameRequestResponse.toString();
+           return requestedPlayer.sendGameRequest(requestingPlayerId, requestingPlayerUsername);
         } else {
             handlingGameRequestResponse.put("response", "GAME_REQUEST_FAILED");
             return handlingGameRequestResponse.toString();
