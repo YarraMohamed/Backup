@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" styleClass="backgroundColor" stylesheets="@../Resources/Pages.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ReplayBoardController">
+   <children>
+      <GridPane layoutX="123.0" layoutY="73.0" prefHeight="413.0" prefWidth="490.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Rectangle fx:id="r1" arcHeight="20.0" arcWidth="20.0" fill="#fcfcfc" height="90.0" stroke="BLACK" strokeType="INSIDE" width="140.0">
+               <effect>
+                  <DropShadow offsetX="5.0" offsetY="5.0" />
+               </effect>
+            </Rectangle>
+            <Rectangle fx:id="r2" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="90.0" stroke="BLACK" strokeType="INSIDE" width="140.0" GridPane.columnIndex="1">
+               <effect>
+                  <DropShadow offsetX="5.0" offsetY="5.0" />
+               </effect>
+            </Rectangle>
+            <Rectangle fx:id="r3" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="90.0" stroke="BLACK" strokeType="INSIDE" width="140.0" GridPane.columnIndex="2">
+               <effect>
+                  <DropShadow offsetX="5.0" offsetY="5.0" />
+               </effect>
+            </Rectangle>
+            <Rectangle fx:id="r4" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="90.0" smooth="false" stroke="BLACK" strokeType="INSIDE" width="140.0" GridPane.rowIndex="1">
+               <effect>
+                  <DropShadow offsetX="5.0" offsetY="5.0" />
+               </effect>
+            </Rectangle>
+            <Rectangle fx:id="r5" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="90.0" stroke="BLACK" strokeType="INSIDE" width="140.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <effect>
+                  <DropShadow offsetX="5.0" offsetY="5.0" />
+               </effect>
+            </Rectangle>
+            <Rectangle fx:id="r6" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="90.0" stroke="BLACK" strokeType="INSIDE" width="140.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <effect>
+                  <DropShadow offsetX="5.0" offsetY="5.0" />
+               </effect>
+            </Rectangle>
+            <Rectangle fx:id="r7" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="90.0" smooth="false" stroke="BLACK" strokeType="INSIDE" width="140.0" GridPane.rowIndex="2">
+               <effect>
+                  <DropShadow offsetX="5.0" offsetY="5.0" />
+               </effect>
+            </Rectangle>
+            <Rectangle fx:id="r8" arcHeight="20.0" arcWidth="20.0" fill="#f2f2f2" height="90.0" stroke="BLACK" strokeType="INSIDE" width="140.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <effect>
+                  <DropShadow offsetX="5.0" offsetY="5.0" />
+               </effect>
+            </Rectangle>
+            <Rectangle fx:id="r9" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="90.0" stroke="BLACK" strokeType="INSIDE" width="140.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <effect>
+                  <DropShadow offsetX="5.0" offsetY="5.0" />
+               </effect>
+            </Rectangle>
+            <Button fx:id="sqOneXo" mnemonicParsing="false" prefHeight="79.0" prefWidth="123.0" styleClass="board">
+               <font>
+                  <Font name="Chewy Regular" size="37.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="8.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="sqTwoXo" mnemonicParsing="false" prefHeight="79.0" prefWidth="120.0" styleClass="board" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Chewy Regular" size="38.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="9.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="sqThreeXo" mnemonicParsing="false" prefHeight="79.0" prefWidth="120.0" styleClass="board" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Chewy Regular" size="38.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="sqFourXo" mnemonicParsing="false" prefHeight="79.0" prefWidth="119.0" styleClass="board" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Chewy Regular" size="38.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="sqFiveXo" mnemonicParsing="false" prefHeight="79.0" prefWidth="117.0" styleClass="board" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Chewy Regular" size="38.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="sqSixXo" mnemonicParsing="false" prefHeight="79.0" prefWidth="120.0" styleClass="board" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Chewy Regular" size="38.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="sqSevenXo" mnemonicParsing="false" prefHeight="79.0" prefWidth="119.0" styleClass="board" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Chewy Regular" size="38.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="sqEightXo" mnemonicParsing="false" prefHeight="79.0" prefWidth="119.0" styleClass="board" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Chewy Regular" size="38.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="sqNineXo" mnemonicParsing="false" prefHeight="79.0" prefWidth="120.0" styleClass="board" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Chewy Regular" size="38.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+      <Text fx:id="gameTitleText" fill="WHITE" layoutX="155.0" layoutY="59.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 55;" styleClass="usernametitle" text="Tic Tac Toe" textAlignment="CENTER" wrappingWidth="390.1640605330467">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

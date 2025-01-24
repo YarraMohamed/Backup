@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="893.0" styleClass="backgroundColor" stylesheets="@../Resources/Pages.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ModePageController">
+   <top>
+      <FlowPane alignment="BASELINE_CENTER" orientation="VERTICAL" prefHeight="145.0" prefWidth="803.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="modeLabel1" alignment="CENTER" prefHeight="50.0" prefWidth="230.0" styleClass="title" text="Let's Play" textAlignment="CENTER" textFill="#f1f1f1">
+               <font>
+                  <Font name="Chewy Regular" size="45.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets bottom="15.0" top="20.0" />
+               </FlowPane.margin>
+            </Label>
+            <Label fx:id="modeLabel2" alignment="CENTER" prefHeight="30.0" prefWidth="180.0" styleClass="texts" text="    Choose a mode!" textFill="#f1f1f1">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Label>
+         </children></FlowPane>
+   </top>
+   <bottom>
+      <HBox alignment="BOTTOM_RIGHT" prefHeight="41.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="signout" layoutX="765.0" layoutY="10.0" mnemonicParsing="false" onAction="#signout" prefHeight="32.0" prefWidth="123.0" text="Sign out" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonTexts" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets bottom="20.0" right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="profileButton" mnemonicParsing="false" onAction="#goToProfile" prefHeight="50.0" prefWidth="123.0" text="Profile" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="20.0" right="15.0" />
+               </HBox.margin>
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonTexts" />
+               </styleClass>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="390.0" stroke="#d9d9d9" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" styleClass="rectangle" width="393.0">
+               <StackPane.margin>
+                  <Insets top="25.0" />
+               </StackPane.margin>
+            </Rectangle>
+            <VBox alignment="CENTER" prefHeight="269.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="computerButton" mnemonicParsing="false" onAction="#goToDifficultyMode" prefHeight="55.0" prefWidth="200.0" text="Computer" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="buttons" />
+                        <String fx:value="texts" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="P2PButton" layoutX="357.0" layoutY="212.0" mnemonicParsing="false" onAction="#goToLocalMode" prefHeight="55.0" prefWidth="200.0" text="Player to Player" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="buttons" />
+                        <String fx:value="texts" />
+                     </styleClass>
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="onlineButton" layoutX="357.0" layoutY="269.0" mnemonicParsing="false" onAction="#getPlayersList" prefHeight="55.0" prefWidth="200.0" text="Online" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS" size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="buttons" />
+                        <String fx:value="texts" />
+                     </styleClass>
+                  </Button>
+               </children>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

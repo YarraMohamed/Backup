@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="TicTacToeController" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clickPlayButton" prefHeight="685.0" prefWidth="893.0" style="-fx-background-color: linear-gradient( #09316D, #86AEE9);" stylesheets="@../Resources/Pages.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HomePageController">
+   <children>
+      <Label fx:id="tileLabel" alignment="CENTER" layoutX="90.0" layoutY="107.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="98.0" prefWidth="893.0" style="-fx-font-size: 48px; -fx-font-weight: bold; -fx-text-fill: white; -fx-font-family: Chewy-Regular.ttf;" text="Let's Play" textAlignment="CENTER" AnchorPane.bottomAnchor="480.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="107.0" />
+      <Label fx:id="ticTackToeLabel" alignment="CENTER" layoutX="581.0" layoutY="196.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="893.0" style="-fx-font-size: 20px; -fx-text-fill: D9D9D9;" text="Tic-Tac-Toe Game" textAlignment="CENTER" AnchorPane.bottomAnchor="419.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="196.0" />
+      <ImageView fx:id="imageView1" fitHeight="262.0" fitWidth="334.0" layoutX="-65.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-51.0" AnchorPane.leftAnchor="-65.0">
+         <image>
+            <Image url="@../Resources/XO.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageView2" fitHeight="282.0" fitWidth="293.0" layoutX="665.0" layoutY="-60.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="463.0" AnchorPane.leftAnchor="665.0" AnchorPane.rightAnchor="-53.53155517578125" AnchorPane.topAnchor="-60.0">
+         <image>
+            <Image url="@../Resources/XO.png" />
+         </image></ImageView>
+      <Button fx:id="playButton" layoutX="323.0" layoutY="331.0" mnemonicParsing="false" onAction="#clickPlayButton" prefHeight="48.0" prefWidth="248.0" style="-fx-background-color: linear-gradient(to bottom, #1F60C1, #8D9CB3); -fx-font-size: 22px; -fx-font-weight: bold; -fx-font-family: Chewy Regular; -fx-text-fill: FFFFFF;" text="Play" textAlignment="CENTER">
+         <styleClass>
+            <String fx:value="buttons" />
+            <String fx:value="texts" />
+         </styleClass></Button>
+      <Button fx:id="playButton1" layoutX="323.0" layoutY="419.0" mnemonicParsing="false" onAction="#clickSignInButton" prefHeight="48.0" prefWidth="248.0" style="-fx-background-color: linear-gradient(to bottom, #1F60C1, #8D9CB3); -fx-font-size: 22px; -fx-font-weight: bold; -fx-font-family: Chewy Regular; -fx-text-fill: FFFFFF;" text="Sign in" textAlignment="CENTER">
+         <styleClass>
+            <String fx:value="buttons" />
+            <String fx:value="texts" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>
